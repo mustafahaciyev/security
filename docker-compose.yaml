@@ -1,0 +1,15 @@
+version: '3.5'
+services:
+  postgres:
+    container_name: security
+    image: postgres
+    environment:
+      POSTGRES_USER: security
+      POSTGRES_PASSWORD: 1234
+      PGDATA: /data/postgres
+    volumes:
+      - postgres:/data/security
+    ports:
+      - "5436:5432"
+volumes:
+  postgres:
