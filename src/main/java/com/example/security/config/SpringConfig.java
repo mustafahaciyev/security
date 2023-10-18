@@ -32,25 +32,25 @@ public class SpringConfig {
         return httpSecurity.build();
     }
 
-    @Bean
-    public InMemoryUserDetailsManager userDetailsManager() {
-        UserDetails publicUser = User.withDefaultPasswordEncoder()
-                .username("public")
-                .password("password")
-                .authorities("PUBLIC")
-                .build();
-        UserDetails user = User.withDefaultPasswordEncoder()
-                .username("user")
-                .password("password")
-                .authorities("USER")
-                .build();
-        UserDetails admin = User.withDefaultPasswordEncoder()
-                .username("admin")
-                .password("password")
-                .authorities("ADMIN")
-                .build();
-        return new InMemoryUserDetailsManager(user,publicUser,admin);
-
-    }
+//    @Bean
+//    public InMemoryUserDetailsManager userDetailsManager() {
+//        UserDetails publicUser = User.withDefaultPasswordEncoder()
+//                .username("public")
+//                .password("password")
+//                .authorities("PUBLIC")
+//                .build();
+//        UserDetails user = User.withDefaultPasswordEncoder()
+//                .username("user")
+//                .password("password")
+//                .authorities("USER")
+//                .build();
+//        UserDetails admin = User.withDefaultPasswordEncoder()
+//                .username("admin")
+//                .password("password")
+//                .authorities("ADMIN")
+//                .build();
+//        return new InMemoryUserDetailsManager(user,publicUser,admin);
+//
+//    }
 
 }
